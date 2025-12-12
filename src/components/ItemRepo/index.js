@@ -1,12 +1,12 @@
 import { ItemContainer } from "./styles";
 
-function ItemRepo() {
+function ItemRepo({repo}) {
   return (
     <ItemContainer>
-      <h3>Title</h3>
-      <p>teste</p>
-      <a href="#">Ver repositório</a>
-      <a className="remove" href="#">Remover</a>
+      <h3>{repo.name}</h3>
+      <p>{repo.full_name}</p>
+      <a href={repo.html_url}rel="noreferrer" target="_blank">Ver repositório</a>
+      <a className="remove" rel="noreferrer" href="#">Remover</a>
       <hr />
     </ItemContainer>
   )
