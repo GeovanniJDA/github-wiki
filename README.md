@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<!-- Substitua o caminho abaixo por sua screenshot real após gerar/exportar.  -->
+<p align="center">
+  <img src="src/assets/img/wiki.png" alt="Demonstração da interface do GitHub Wiki" width="700"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GitHub Wiki
 
-## Available Scripts
+## Visão Geral do Projeto
 
-In the project directory, you can run:
+O **GitHub Wiki** é uma aplicação front-end desenvolvida em React que oferece uma interface funcional para interação com a API pública do GitHub. Seu objetivo principal é facilitar a busca, organização e o armazenamento de repositórios favoritos por meio de uma lista local dinâmica. A aplicação resolve o desafio da gestão e acesso rápido a múltiplos repositórios de interesse, eliminando a dispersão de links e tornando o acompanhamento eficiente.
 
-### `npm start`
+## 🚀 Funcionalidades Principais
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Integração com API**  
+  Consome dados diretamente da API REST do GitHub utilizando a biblioteca Axios, permitindo consultas em tempo real de repositórios.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Gerenciamento de Repositórios**  
+  Permite a busca de repositórios pelo formato "Usuário/NomeDoRepositório". Usuários podem adicionar, visualizar e remover repositórios da lista favorita sem recarregar a página.
 
-### `npm test`
+- **Gerenciamento de Estado Dinâmico**  
+  Todos os dados da lista de favoritos são mantidos e atualizados em tempo real utilizando o estado do React (Hooks), garantindo uma experiência fluida.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Acesso Direto**  
+  Cada item adicionado oferece link direto para o repositório correspondente no GitHub, otimizando a navegação do usuário.
 
-### `npm run build`
+- **Tratamento de Erros**  
+  Implementação de mecanismos para informar buscas inválidas, prevenindo duplicatas e exibindo mensagens de feedback claras para o usuário (caso implementado no código).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tecnologias Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React.js:** Componentes funcionais, uso intensivo de Hooks (`useState`, `useEffect`).
+- **Axios:** Cliente HTTP para integração com a API do GitHub.
+- **Styled-components:** Estilização baseada em componentes, com fácil manutenção e personalização de temas.
+- **Ferramentas de Build:** Create React App (CRA) e Webpack para bundling, Babel para transpile do JS moderno.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Interface
 
-### `npm run eject`
+Interface temática **Deep Nebula** (Glassmorphism), layout responsivo utilizando unidades `rem` e princípios modernos de UX para uma navegação agradável em qualquer dispositivo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚡ Como Começar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pré-requisitos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Node.js (>= 14.x recomendado)
+- npm ou yarn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Instalação
 
-## Learn More
+```bash
+git clone https://github.com/GeovanniJDA/github-wiki.git
+cd github-wiki
+npm install
+npm start
+```
+_Ou, se preferir, utilize `yarn install` e `yarn start`._
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📁 Estrutura do Projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **components/**
+  - **Input:** Campo de entrada controlado para busca de repositórios.
+  - **Button:** Botão reutilizável para submissão ou ações diversas.
+  - **ItemRepo:** Componente que exibe os detalhes de cada repositório salvo, incluindo link direto para o GitHub e botão de remoção.
 
-### Code Splitting
+Os componentes são desacoplados e organizados para facilitar expansão, manutenção e testabilidade do código.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Para dúvidas ou sugestões, utilize o sistema de Issues do repositório.
